@@ -26,8 +26,11 @@
     <div class="hero-content">
       <p class="hero-greeting">Hi, I'm</p>
       <h1>Ryan Geng</h1>
-      <p class="hero-sub">Mechanical Engineering Student</p>
-      <a href="#projects" class="btn">View My Work</a>
+      <p class="hero-sub">Mechanical Engineering Student · Northeastern University London</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
     </div>
   </section>
 
@@ -36,23 +39,31 @@
     <div class="container">
       <h2>About Me</h2>
       <div class="about-grid">
-        <div class="about-text">
-          <p>
-            I'm a mechanical engineering student with a passion for design, problem-solving, and building things that work. I enjoy bridging the gap between engineering principles and real-world applications.
-          </p>
-          <p>
-            When I'm not in the lab or at the drawing board, I'm exploring new tools and technologies that help me bring ideas to life.
-          </p>
+        <div class="about-photo-col">
+          <img src="photo.jpg" alt="Ryan Geng" class="about-photo" />
         </div>
-        <div class="about-skills">
-          <h3>Skills</h3>
-          <ul class="skills-list">
-            <li>CAD / SolidWorks</li>
-            <li>FEA & Simulation</li>
-            <li>Prototyping & Fabrication</li>
-            <li>MATLAB</li>
-            <li>Technical Writing</li>
-          </ul>
+        <div class="about-right">
+          <div class="about-text">
+            <p>
+              I'm a mechanical engineering student at Northeastern University London with a hands-on approach to problem-solving. My work spans PCB design, embedded systems, CAD, and fabrication — I enjoy projects that sit at the intersection of mechanical and electrical engineering.
+            </p>
+            <p>
+              I've built everything from surgical proximity sensors to combat robots to low-cost lab equipment, often from scratch and under tight constraints. I'm most energized when a project requires learning something new to make it work.
+            </p>
+          </div>
+          <div class="about-skills">
+            <h3>Skills</h3>
+            <ul class="skills-list">
+              <li>CAD — SolidWorks, Fusion 360</li>
+              <li>PCB Design — Altium Designer</li>
+              <li>3D Printing & Fabrication</li>
+              <li>Embedded Systems — Raspberry Pi Pico, MicroPython</li>
+              <li>Electronics — Soldering, Circuit Design, Amplifiers</li>
+              <li>FEA & Simulation</li>
+              <li>Python & MATLAB</li>
+              <li>Technical Writing & Documentation</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -67,30 +78,50 @@
       <div class="projects-grid">
 
         <div class="card">
-          <div class="card-tag">Mechanical Design</div>
+          <div class="card-tag">Mechanical Design · CAD</div>
           <h3>Budget Microcentrifuge</h3>
-          <p>A lab-grade microcentrifuge designed to prove the viability of low-cost DIY lab equipment. Safely reaches speeds of up to 3000 RPM.</p>
+          <p>Designed a fully functional lab-grade microcentrifuge to demonstrate that professional lab equipment can be built at a fraction of commercial cost. The device safely reaches <strong>3000 RPM</strong> and was designed with balance, safety, and ease of assembly in mind.</p>
+          <ul class="card-details">
+            <li>Custom CAD enclosure and rotor designed in SolidWorks</li>
+            <li>Optimized for low-cost fabrication and reproducibility</li>
+            <li>Full design files publicly available</li>
+          </ul>
           <a href="https://github.com/ryangeng2/Budget-Microcentrifuge" target="_blank" class="card-link">View on GitHub →</a>
         </div>
 
         <div class="card">
-          <div class="card-tag">Robotics</div>
+          <div class="card-tag">Robotics · Electronics</div>
           <h3>5-DOF Robotic Arm</h3>
-          <p>A 5 degree-of-freedom robotic arm built in high school to autonomously pick up garlic. Designed, fabricated, and programmed from scratch.</p>
+          <p>Built a 5 degree-of-freedom robotic arm in high school capable of autonomously picking up garlic. Designed, fabricated, wired, and programmed entirely from scratch.</p>
+          <ul class="card-details">
+            <li>5 independently controlled servo axes</li>
+            <li>Custom 3D-printed linkages and gripper</li>
+            <li>Programmed with autonomous pick-and-place routine</li>
+          </ul>
           <a href="https://github.com/ryangeng2/Robotic-Arm-5DOF" target="_blank" class="card-link">View on GitHub →</a>
         </div>
 
         <div class="card">
           <div class="card-tag">Robotics · Python</div>
           <h3>Maze Navigation Robot</h3>
-          <p>An autonomous maze-solving robot built for my Cornerstone of Engineering final project. Programmed in Python with real-time pathfinding.</p>
+          <p>Built an autonomous maze-solving robot for my Cornerstone of Engineering I final project. The robot navigates an unknown maze in real time using sensor feedback and pathfinding logic written in Python.</p>
+          <ul class="card-details">
+            <li>Real-time sensor-driven pathfinding</li>
+            <li>Written in Python for a microcontroller platform</li>
+            <li>Demonstrated live at final project showcase</li>
+          </ul>
           <a href="https://github.com/ryangeng2/Maze-Navigation-Robot" target="_blank" class="card-link">View on GitHub →</a>
         </div>
 
         <div class="card">
           <div class="card-tag">CAD · Open Source</div>
           <h3>High School Biotech Equipment</h3>
-          <p>Custom lab equipment designed and fabricated for Carlmont High School's biotech department. CAD files and documentation publicly available.</p>
+          <p>Designed and fabricated custom laboratory equipment for Carlmont High School's biotechnology department, where off-the-shelf tools were either unavailable or cost-prohibitive.</p>
+          <ul class="card-details">
+            <li>Multiple pieces of lab equipment designed in CAD</li>
+            <li>Fabricated and deployed in an active classroom lab</li>
+            <li>All CAD files and documentation open source</li>
+          </ul>
           <a href="https://github.com/ryangeng2/High-School-Biotech-Equipment" target="_blank" class="card-link">View on GitHub →</a>
         </div>
 
@@ -103,14 +134,27 @@
         <div class="card">
           <div class="card-tag">Medical Device · NEU London</div>
           <h3>NerveSense</h3>
-          <p>A surgical proximity device that uses electrical stimulation to detect nearby nerves in real time, helping surgeons avoid peripheral nerve injuries during incision. Built with a custom PCB, Raspberry Pi Pico, and 20×4 LCD. Cornerstone of Engineering II team project.</p>
+          <p>A real-time surgical proximity device that helps surgeons detect and avoid peripheral nerves during incision. The device stimulates tissue with a TENS unit and measures the nerve's electrical response through a scalpel-mounted electrode to estimate distance.</p>
+          <ul class="card-details">
+            <li>Custom PCB designed in Altium with INA333 biomedical amplifier and bandpass filter</li>
+            <li>AD620 amplifier module (100× gain) for signal amplification</li>
+            <li>Raspberry Pi Pico reads ADC, runs exponential distance model (R²=0.93)</li>
+            <li>20×4 I2C LCD displays real-time proximity — detects nerves up to 5cm away (±0.5cm)</li>
+            <li>AgCl-coated silver electrodes to minimize capacitive interference</li>
+            <li>CAD-designed 3D-printed enclosure and scalpel probe assembly</li>
+          </ul>
           <a href="https://github.com/spencer-ti-ozaki/SurgeryNerveSense" target="_blank" class="card-link">View on GitHub →</a>
         </div>
 
         <div class="card">
           <div class="card-tag">Combat Robotics · NEU London</div>
           <h3>Combat Robotics Team</h3>
-          <p>Engineering work done as part of Northeastern University London's Combat Robotics Team — design, fabrication, and competition prep.</p>
+          <p>Contributing to Northeastern University London's Combat Robotics Team — designing, fabricating, and testing combat robots built to compete against other university teams.</p>
+          <ul class="card-details">
+            <li>Mechanical design and CAD for robot components</li>
+            <li>Hands-on fabrication and assembly</li>
+            <li>Iterative testing and competition preparation</li>
+          </ul>
           <a href="https://github.com/ryangeng2/NEU-London-Combat-Robotics-Team-1" target="_blank" class="card-link">View on GitHub →</a>
         </div>
 
@@ -127,7 +171,7 @@
       <a href="mailto:ryangeng07@gmail.com" class="btn">Say Hello</a>
       <div class="social-links">
         <a href="https://github.com/ryangeng2" target="_blank">GitHub</a>
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/rui-geng-5085242b2/" target="_blank">LinkedIn</a>
       </div>
     </div>
   </section>
