@@ -96,7 +96,7 @@ nav a:hover { color: var(--blue); }
 /* Robotic arm GIF — crop biased upward so the whole arm shows */
 #bg-arm {
   object-position: center 25%;
-  animation: fadeArm 22s infinite;
+  animation: fadeArm 25s infinite;
 }
 
 /* Maze YouTube Short (9:16) — fill full width so no side bars */
@@ -105,51 +105,65 @@ nav a:hover { color: var(--blue); }
   height: calc(100vw * 16 / 9);
   min-height: 100vh;
   object-fit: cover;
-  animation: fadeMaze 22s infinite;
+  animation: fadeMaze 25s infinite;
+}
+
+#bg-vid {
+  object-position: center;
+  animation: fadeVid 25s infinite;
 }
 
 #bg-micro {
   object-position: center;
-  animation: fadeMicro 22s infinite;
+  animation: fadeMicro 25s infinite;
 }
 
 #bg-pcb {
   object-position: center;
-  animation: fadePcb 22s infinite;
+  animation: fadePcb 25s infinite;
 }
 
-/* 22s cycle:  arm 0-4s | maze 4-14s | micro 14-18s | pcb 18-22s */
+/* 25s cycle:  arm 0-4s | maze 4-11s | video 11-17s | micro 17-21s | pcb 21-25s */
 @keyframes fadeArm {
   0%   { opacity: 1; }
-  18.18% { opacity: 1; }
-  22.73% { opacity: 0; }
-  95.45% { opacity: 0; }
+  16% { opacity: 1; }
+  20% { opacity: 0; }
+  96% { opacity: 0; }
   100% { opacity: 1; }
 }
 
 @keyframes fadeMaze {
   0%   { opacity: 0; }
-  13.64% { opacity: 0; }
-  18.18% { opacity: 1; }
-  63.64% { opacity: 1; }
-  68.18% { opacity: 0; }
+  12% { opacity: 0; }
+  16% { opacity: 1; }
+  44% { opacity: 1; }
+  48% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeVid {
+  0%   { opacity: 0; }
+  40% { opacity: 0; }
+  44% { opacity: 1; }
+  68% { opacity: 1; }
+  72% { opacity: 0; }
   100% { opacity: 0; }
 }
 
 @keyframes fadeMicro {
   0%   { opacity: 0; }
-  59.09% { opacity: 0; }
-  63.64% { opacity: 1; }
-  81.82% { opacity: 1; }
-  86.36% { opacity: 0; }
+  64% { opacity: 0; }
+  68% { opacity: 1; }
+  84% { opacity: 1; }
+  88% { opacity: 0; }
   100% { opacity: 0; }
 }
 
 @keyframes fadePcb {
   0%   { opacity: 0; }
-  77.27% { opacity: 0; }
-  81.82% { opacity: 1; }
-  95.45% { opacity: 1; }
+  80% { opacity: 0; }
+  84% { opacity: 1; }
+  96% { opacity: 1; }
   100% { opacity: 0; }
 }
 
